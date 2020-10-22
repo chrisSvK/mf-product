@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 import "./index.css";
+import Product from "./Product"
 
-const App = () => <div>Hi there, I'm React from Webpack 5.</div>;
+function App() {
+  const [amount, setAmount] = useState(0)
+
+  return (
+    <div className="App">
+      <Product />
+      
+    </div>
+  );
+}
 
 ReactDOM.render(<App />, document.getElementById("app"));
